@@ -116,7 +116,7 @@ public class A1Example {
 		int cur_max = vals[0];
 		
 		// Starting with second value (if any), compare each value
-		// in array with current minimum and replace if smaller.
+		// in array with current minimum and replace if smaller
 		
 		for (int i=1; i < vals.length; i++) {
 			if (vals[i] > cur_max) {
