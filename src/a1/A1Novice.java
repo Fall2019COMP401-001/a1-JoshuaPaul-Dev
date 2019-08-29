@@ -50,7 +50,7 @@ public class A1Novice {
 		}
 		//an output for loop uses the index value i to output to console the customer names
 		//as well as outputting the totals saved to the same index value i
-		//keeping the index value i matching between arrays is vital for correct usage of the output for loop
+		//keeping the index value i matching between arrays is vital for correct usage of the output for loop.
 		
 	}
 }
