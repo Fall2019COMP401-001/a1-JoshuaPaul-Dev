@@ -81,7 +81,6 @@ public class A1Adept {
 		scan.close();
 		//this closes the scanner object
 		
-		System.out.println("output");
 		System.out.println("Biggest: " + firstNames[biggestIndex] + " " + lastNames[biggestIndex] + " (" + String.format("%.2f", biggest) + ")");
 		System.out.println("Smallest: " + firstNames[smallestIndex] + " " + lastNames[smallestIndex] + " (" + String.format("%.2f", smallest) + ")");
 		System.out.println("Average: " + String.format("%.2f", average));
