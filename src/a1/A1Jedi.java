@@ -36,7 +36,9 @@ public class A1Jedi {
 		
 		int[] itemsBought = new int[numCustomers];
 		double[] totals = new double[numCustomers];
+		boolean[][] didBuy = new boolean[numCustomers][numItems];
 		//creates two arrays for the directory of customers containing the number of items bought and the total paid by each customer
+		//creates an array of arrays containing boolean values for whether or not each customer has purchased each item
 		
 		for(int i=0; i<numCustomers; i++) {
 			firstNames[i] = scan.next();
@@ -47,7 +49,10 @@ public class A1Jedi {
 				String goodName = scan.next();
 				for(int n=0; n<numItems; n++) {
 					if((goodName.compareTo(itemNames[n]))==0) {
-						customerBought[n]++;
+						if(didBuy[i][n] == false) {
+							customerBought[n]++;
+							didBuy[i][n] = true;
+						}
 						goodBought[n] += numGood;
 						totals[i] += (numGood * itemPrices[n]);
 					}
@@ -59,7 +64,9 @@ public class A1Jedi {
 		 * The second and third for loops populate the customer directory with the total paid of each customer by first finding the quantity
 		 * and name of the item bought and then cross referencing the item with the item names and prices in the item directory. This repeats
 		 * for every different item that each customer purchased. The final for loop also populates the item directory with information on 
-		 * how many customers purchased each item and how many of each item is purchased overall. 
+		 * how many customers purchased each item and how many of each item is purchased overall. The array of arrays is tested for the original
+		 * value of false in the location of each of the items for each customer. If that customer has not increased the customerBought value for
+		 * each individual item they buy, then the counter will be incremented and the boolean in that index for that item set to true.
 		 */
 
 		for(int i=0; i<numItems; i++) {
